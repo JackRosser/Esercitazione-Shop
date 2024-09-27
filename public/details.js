@@ -38,9 +38,11 @@ fetch(`${striveUrl}/${productId}`, {
     let details = document.createElement("div");
     details.style.alignItems = "start";
     details.style.padding = "1rem";
-    details.innerHTML = `<h1 class="text-5xl font-black">${data.name}</h1>
+    details.innerHTML = `<h1 class="mb-5 text-5xl font-black">${data.name}</h1>
+    <p><span class="font-black text-red-500">PRODOTTO DA </span>${data.brand}</p>
     <h2 class="text-sm">${data.description}</h2>
-    <div>
-    <p><span class="font-black">PRICE: </span>${data.price} HRK</p></div>`;
+    <div class="flex items-center justify-between w-full">
+    <p><span class="font-black">PRICE: </span>${data.price} HRK</p>
+    <button>Buy NOW</button></div>`;
     main.append(card, details);
   });
