@@ -44,5 +44,10 @@ fetch(`${striveUrl}/${productId}`, {
     <div class="flex items-center justify-between w-full">
     <p><span class="font-black">PRICE: </span>${data.price} HRK</p>
     <button>Buy NOW</button></div>`;
+    details.querySelector("button").addEventListener("click", function () {
+      localStorage.setItem("product", JSON.stringify(data));
+      alert("prodotto acquistato");
+      window.location.href = "index.html";
+    });
     main.append(card, details);
   });

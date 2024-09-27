@@ -25,6 +25,7 @@ fetch(striveUrl, {
   })
   .then((data) => {
     console.log(data);
+    main.innerHTML = "";
     data.forEach((product) => {
       let card = document.createElement("div");
       card.innerHTML = `<img src=${product.imageUrl} alt=${product.name}>
@@ -34,3 +35,7 @@ fetch(striveUrl, {
       main.appendChild(card);
     });
   });
+
+window.onload = function () {
+  document.querySelector("main").style.opacity = 1;
+};
