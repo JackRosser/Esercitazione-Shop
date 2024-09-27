@@ -23,7 +23,7 @@ document.getElementById("cart").addEventListener("click", function () {
       for (let i = 0; i < myShop.length; i++) {
         let div = document.createElement("div");
         div.style.overflow = "scroll";
-        div.className = "flex items-center justify-start bg-slate-200 p-2 font-black hover:bg-slate-400 cursor-pointer hover:text-white";
+        div.className = "divCart";
 
         let divText = document.createElement("div");
         divText.innerText = myShop[i].name;

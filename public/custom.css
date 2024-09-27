@@ -19,3 +19,18 @@
     opacity: 0;
   }
 }
+
+.divCart {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  background-color: #e2e8f0 !important;
+  padding: 0.5rem !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+}
+
+.divCart:hover {
+  background-color: #94a3b8 !important;
+  color: white !important;
+}
