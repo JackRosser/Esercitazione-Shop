@@ -39,6 +39,8 @@ fetch(`${striveUrl}/${productId}`, {
     details.style.alignItems = "start";
     details.style.padding = "1rem";
     details.innerHTML = `<h1 class="text-5xl font-black">${data.name}</h1>
-    <h2 class="text-sm">${data.description}</h2>`;
+    <h2 class="text-sm">${data.description}</h2>
+    <div>
+    <p><span class="font-black">PRICE: </span>${data.price} HRK</p></div>`;
     main.append(card, details);
   });
