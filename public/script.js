@@ -1,6 +1,15 @@
 let box = document.getElementById("asbrout");
 let ciaoste = document.getElementById("ciaoste");
+let esc = document.getElementById("esc");
 let boxToggle = false;
+
+esc.addEventListener("click", function () {
+  if (boxToggle) {
+    boxToggle = false;
+    ciaoste.classList.remove("translate-x-0");
+    ciaoste.classList.add("-translate-x-full");
+  }
+});
 
 box.addEventListener("click", function () {
   if (!boxToggle) {

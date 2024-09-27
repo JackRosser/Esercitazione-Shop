@@ -19,7 +19,7 @@ document.getElementById("cart").addEventListener("click", function () {
     if (myShop.length > 0) {
       for (let i = 0; i < myShop.length; i++) {
         let div = document.createElement("div");
-        div.className = "flex items-center justify-start bg-slate-200 p-3 font-black hover:bg-slate-400 cursor-pointer hover:text-white";
+        div.className = "flex items-center justify-start bg-slate-200 p-2 font-black hover:bg-slate-400 cursor-pointer hover:text-white";
 
         let divText = document.createElement("div");
         divText.innerText = myShop[i].name;
