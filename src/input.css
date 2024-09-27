@@ -10,7 +10,7 @@
     @apply lg:w-[80%];
     @apply xl:grid-cols-4;
     @apply xl:w-[90%];
-    @apply 2xl:grid-cols-6;
+    @apply 2xl:grid-cols-5;
     @apply 2xl:w-[95%];
     @apply p-4;
     @apply grid;
