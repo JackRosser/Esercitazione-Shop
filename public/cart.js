@@ -16,9 +16,13 @@ document.getElementById("cart").addEventListener("click", function () {
     aside.className = "absolute bg-white right-0 z-50 top-0 w-full h-[300px] flex flex-col";
     aside.style.animation = "cart 500ms both";
 
+    // per qualche motivo Tailwind non mi ha caricato più queste classi di punto in bianco
+    // non ho capito il perché
+    // il background deve essere slate-200 e cambiare all'hover, ma non lo fa!!!!
     if (myShop.length > 0) {
       for (let i = 0; i < myShop.length; i++) {
         let div = document.createElement("div");
+        div.style.overflow = "scroll";
         div.className = "flex items-center justify-start bg-slate-200 p-2 font-black hover:bg-slate-400 cursor-pointer hover:text-white";
 
         let divText = document.createElement("div");
