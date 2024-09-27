@@ -1,11 +1,18 @@
-let box = document.getElementById("ciaoste");
-let ciaoste = function () {
-  box.classList.toggle("translate-x-0");
-};
-let adios = document.getElementById("esc");
-let esc = function () {
-  box.classList.remove("translate-x-0");
-};
+let box = document.getElementById("asbrout");
+let ciaoste = document.getElementById("ciaoste");
+let boxToggle = false;
+
+box.addEventListener("click", function () {
+  if (!boxToggle) {
+    boxToggle = true;
+    ciaoste.classList.add("translate-x-0");
+    ciaoste.classList.remove("-translate-x-full");
+  } else {
+    boxToggle = false;
+    ciaoste.classList.remove("translate-x-0");
+    ciaoste.classList.add("-translate-x-full");
+  }
+});
 
 let main = document.querySelector("main");
 const striveUrl = "https://striveschool-api.herokuapp.com/api/product/";
