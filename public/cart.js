@@ -32,7 +32,7 @@ document.getElementById("cart").addEventListener("click", function () {
         img.style.marginRight = "1rem";
 
         let button = document.createElement("button");
-        button.className = "text-red-500 bg-slate-400 p-1 rounded-full hover:bg-white hover:text-black active:text-white active:bg-black ml-5";
+        button.className = "text-red-500 bg-slate-400 p-2 rounded-full hover:bg-white hover:text-black active:text-white active:bg-black ml-5";
         button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path
                   stroke-linecap="round"

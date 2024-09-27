@@ -40,10 +40,14 @@ fetch(`${striveUrl}/${productId}`, {
     details.style.padding = "1rem";
     details.innerHTML = `<h1 class="mb-5 text-5xl font-black">${data.name}</h1>
     <p><span class="font-black text-red-500">PRODOTTO DA </span>${data.brand}</p>
-    <h2 class="text-sm">${data.description}</h2>
-    <div class="flex items-center justify-between w-full">
-    <p><span class="font-black">PRICE: </span>${data.price} HRK</p>
-    <button>Buy NOW</button></div>`;
+    <p style="margin-top: 0.5rem"><span class="font-black">PRICE: </span>${data.price} HRK</p>
+    <h2 class="text-sm font-mono" style="color: gray;">${data.description}</h2>
+    <div id="cancel" class="bg-red-600 text-white rounded p-2 cursor-pointer">Elimina Prodotto</div>
+    <div id="modify" class="cursor-pointer p-2 rounded-lg" style="background-color: yellow; margin-block: 1rem;">Modifica Prodotto</div>
+
+    
+    <button>Buy NOW</button></div>
+`;
     details.querySelector("button").addEventListener("click", function () {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(data);
@@ -51,6 +55,23 @@ fetch(`${striveUrl}/${productId}`, {
 
       alert("Prodotto acquistato");
       window.location.href = "index.html";
+    });
+
+    details.querySelector("#cancel").addEventListener("click", function () {
+      fetch(`${striveUrl}/${productId}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: striveKey
+        }
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Errore durante l'eliminazione del prodotto");
+          }
+          alert("Prodotto eliminato");
+          window.location.href = "index.html";
+        })
+        .catch((error) => console.error("Errore:", error));
     });
 
     main.append(card, details);
