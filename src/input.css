@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  main {
+    @apply p-4;
+    @apply grid;
+    @apply gap-3;
+    @apply lg:w-[80%];
+    @apply m-auto;
+  }
+  main > div {
+    @apply bg-white;
+    @apply p-2;
+    @apply shadow-sm;
+  }
+}
