@@ -43,9 +43,14 @@
   }
 
   main > div button {
-    @apply bg-sky-500;
-    @apply text-white;
+    @apply bg-slate-300;
+    @apply text-black;
     @apply p-2;
     @apply rounded-md;
+  }
+
+  main > div button:hover {
+    @apply bg-sky-500;
+    @apply text-white;
   }
 }
