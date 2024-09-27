@@ -4,15 +4,48 @@
 
 @layer base {
   main {
+    @apply grid-cols-2;
+    @apply md:w-2/3;
+    @apply lg:grid-cols-3;
+    @apply lg:w-[80%];
+    @apply xl:grid-cols-4;
+    @apply xl:w-[90%];
+    @apply 2xl:grid-cols-6;
+    @apply 2xl:w-[95%];
     @apply p-4;
     @apply grid;
     @apply gap-3;
-    @apply lg:w-[80%];
+    @apply md:gap-5;
+    @apply 2xl:gap-10;
     @apply m-auto;
   }
   main > div {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
     @apply bg-white;
     @apply p-2;
     @apply shadow-sm;
+    @apply overflow-hidden;
+  }
+
+  main > div h2 {
+    @apply grow;
+    @apply font-bold;
+    @apply text-2xl;
+    @apply mt-2;
+    @apply mb-5;
+  }
+
+  main > div img {
+    @apply h-[200px];
+    @apply w-full;
+  }
+
+  main > div button {
+    @apply bg-sky-500;
+    @apply text-white;
+    @apply p-2;
+    @apply rounded-md;
   }
 }
