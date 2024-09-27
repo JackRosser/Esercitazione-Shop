@@ -1,5 +1,6 @@
 let cartToggle = false;
 const body = document.querySelector("body");
+let myShop = JSON.parse(localStorage.getItem("product")) || [];
 
 document.getElementById("cart").addEventListener("click", function () {
   if (cartToggle) {
@@ -14,7 +15,7 @@ document.getElementById("cart").addEventListener("click", function () {
     aside.className = "absolute bg-white right-0 z-50 top-0 w-full h-[300px] flex flex-col";
     aside.style.animation = "cart 500ms both";
     aside.innerHTML = `<div class="bg-slate-200 p-3 font-black flex items-center hover:bg-slate-400 cursor-pointer hover:text-white">
-        Nome Prodotto<button class="text-red-500 bg-slate-400 p-1 rounded-full hover:bg-white hover:text-black active:text-white active:bg-black ml-5">
+        <img src=${myShop.imageUrl} style="height: 50px; width: 50px; margin-right: 1rem;">${myShop.name}<button class="text-red-500 bg-slate-400 p-1 rounded-full hover:bg-white hover:text-black active:text-white active:bg-black ml-5">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path
               stroke-linecap="round"
