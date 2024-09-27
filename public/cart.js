@@ -1,6 +1,7 @@
 let cartToggle = false;
 const body = document.querySelector("body");
-let myShop = JSON.parse(localStorage.getItem("product")) || [];
+let myShop = JSON.parse(localStorage.getItem("cart"));
+console.log(myShop);
 
 document.getElementById("cart").addEventListener("click", function () {
   if (cartToggle) {
@@ -18,8 +19,11 @@ document.getElementById("cart").addEventListener("click", function () {
     if (myShop.length > 0) {
       for (let i = 0; i < myShop.length; i++) {
         let div = document.createElement("div");
-        div.className = "bg-slate-200 p-3 font-black flex items-center hover:bg-slate-400 cursor-pointer hover:text-white";
-        div.innerText = myShop[i].name;
+        div.className = "flex items-center justify-start bg-slate-200 p-3 font-black hover:bg-slate-400 cursor-pointer hover:text-white";
+
+        let divText = document.createElement("div");
+        divText.innerText = myShop[i].name;
+        divText.style.flexGrow = "1";
 
         let img = document.createElement("img");
         img.src = myShop[i].imageUrl;
@@ -37,7 +41,13 @@ document.getElementById("cart").addEventListener("click", function () {
                 />
               </svg>`;
 
-        div.append(img, button);
+        button.addEventListener("click", function () {
+          myShop.splice(i, 1);
+          localStorage.setItem("cart", JSON.stringify(myShop));
+          div.remove();
+        });
+
+        div.append(divText, img, button);
         aside.appendChild(div);
       }
     } else {
