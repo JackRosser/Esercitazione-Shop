@@ -125,7 +125,7 @@
         </div>
       </nav>
     </header>
-    <section class="flex justify-center relative">
+    <section class="flex justify-center items-center gap-2 relative">
       <form class="mt-10 bg-white p-5 w-full md:w-1/2 lg:w-[40%] xl:w-1/4">
         <div class="relative z-0 w-full mb-5 group">
           <input
@@ -142,6 +142,66 @@
             >Bocca da Fuoco</label
           >
         </div>
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            name="weaponDescription"
+            id="weaponDescription"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=""
+            required
+          />
+          <label
+            for="weaponDescription"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >Di cosa si tratta?</label
+          >
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            name="weaponBrand"
+            id="weaponBrand"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=""
+            required
+          />
+          <label
+            for="weaponBrand"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >Chi l'ha prodotta?</label
+          >
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            name="weaponImg"
+            id="weaponImg"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=""
+            required
+          />
+          <label
+            for="weaponImg"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >Immagine Bocca da Fuoco</label
+          >
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            name="weaponPrice"
+            id="weaponPrice"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=""
+            required
+          />
+          <label
+            for="weaponPrice"
+            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >Soldi da spendere</label
+          >
+        </div>
 
         <button
           type="submit"
@@ -150,19 +210,9 @@
           Nuovo Prodotto
         </button>
       </form>
-      <div
-        class="absolute z-50 w-[300px] bottom-32 md:-bottom-[350px] h-[300px] text-white text-5xl flex flex-col justify-center items-center text-center"
-        style="
-          background-size: cover;
-          background-position: right;
-          background-image: url('https://media1.giphy.com/media/GOAafaoBBuKY0/200w.gif?cid=6c09b952v28zvjjzzir4kcnza9o583vq6y1ua1z4zqrnhdqe&ep=v1_gifs_search&rid=200w.gif&ct=g');
-        "
-      >
-        <p>Prodotto Inviato con successo!!!</p>
-        <button class="border py-2 px-10 mt-5 hover:bg-black rounded-md outline outline-2">OK</button>
-      </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script src="script.js"></script>
+    <script src="backoffice.js"></script>
   </body>
 </html>
